@@ -1,7 +1,8 @@
+import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
 import { SafeAreaView, StyleSheet, TextInput, Button } from "react-native";
 
-const UsernameInput = () => {
+const UsernameInput = ({ navigation }) => {
   const [text, onChangeText] = React.useState("");
   const [username, setUsername] = React.useState("");
 
@@ -18,7 +19,7 @@ const UsernameInput = () => {
       />
       <Button
         style={styles.button}
-        onPress={() => setUsername(text)}
+        onPress={() => navigation.navigate("Group")}
         title="Confirm Username"
         accessibilityLabel="Learn more about this purple button"
       />
